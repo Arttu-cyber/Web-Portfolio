@@ -1,0 +1,444 @@
+* {
+  box-sizing: border-box;
+}
+
+/* yleinen tyyli */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(#cfcfcf, #dcdcdc);
+}
+
+/* Navigointipalkki */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    
+}
+
+/* yleistä boksi*/
+.textiboxi {
+  background: linear-gradient(135deg, #ffffffcc, #f0f0f0cc);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.textiboxi h2 {
+  text-align: center;
+}
+
+
+/* Vasemman reunan nimi */
+.name-logo {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-logo:hover {
+  color: #ddd;
+}
+
+/* Oikean reunan linkit */
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* navigaatiolinkit*/
+.nav-links a {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  background-color: #ddd;
+}
+
+ /* Tärkeä tyylitys sivulla */
+.sectionosio {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 100px;
+  text-align: left;
+}
+
+.sectionosio a {
+  color: grey;
+}
+
+.sectionosio a:hover {
+  color: black;
+}
+
+/* Kummatkin osiot */
+.contLeft, .contRight {
+  flex: 1;
+  max-width: 450px;
+  padding: 2%;
+  margin: 1%;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #F7F5EE;
+  border: 1px solid #AC9675;
+  border-radius: 0.5em;
+}
+
+/* Vasen kuva */
+.contLeft img {
+
+  width: 100%;
+  border-radius: 5px;
+  max-height: 400px;
+    
+}
+
+/* Oikea kuva */
+.contRight img {
+
+  width: 100%;
+  border-radius: 5px;
+  max-height: 400px;
+}
+
+.info-boksi {
+  display: inline-block;
+  background-color: #2b2b2b;   
+  color: white;                
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;         
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.info-boksi p {
+  text-align: left;
+}
+
+.infoboksi2 {
+  background-color: rgb(71, 71, 71);   
+  color: #fff;              
+  padding: 20px;       
+  max-width: auto;
+  text-align: center;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #F7F5EE;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #F7F5EE;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #F7F5EE;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #F7F5EE;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* linkit eri osioihin */
+#sectionyleista {
+ visibility: inherit;
+}
+
+#sectiontietoja {
+  visibility: inherit;
+}
+
+#sectionosaaminen {
+  visibility: inherit;
+}
+
+#sectionharrastukset {
+  visibility: inherit;
+}
+
+/* smuuttiskrolli */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+/*harrastusosio */
+.harrastus {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.harrastus-kortti {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1rem;
+  align-items: start;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 1.25rem;
+}
+
+.harrastus-media {
+  aspect-ratio: 16 / 12;
+  width: 100%;
+  border-radius: 8px;
+  background: #f2f4f7;
+  border: 1px solid #dfe3e8;
+}
+
+.harrastus-sisalto h3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin: 0 0 0.5rem 0;
+}
+
+.harrastus-sisalto p {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.harrastus-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* yhteystiedot*/
+.kontakti-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sposti::before {
+  content: "✉️";
+}
+
+/* Responsiivisuus pienemmillä näytöillä */
+@media screen and (max-width: 900px) {
+
+    .sectionosio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .name-logo {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 5px 8px;
+        margin: 3px 0;
+    }
+
+
+  .contLeft, .contRight {
+    display: block;
+    width: 80%;
+    margin: 2%;
+    max-width: 450px;
+    
+    }
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+
+    .textiboxi {
+    max-width: 90%;
+    padding: 15px 18px;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .textiboxi h2 {
+    font-size: 1.3rem;
+  }
+
+  .textiboxi p {
+    font-size: 0.95rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+   .harrastus-kortti {
+    grid-template-columns: 1fr;
+  }
+
+  .harrastus-media {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.5rem;
+  }
+
+  .harrastus {
+    padding: 1.5rem 1rem;
+  }
+  
+   .kontakti {
+    flex-direction: column; 
+    gap: 5px;   
+  }
+
+  .footer {
+    font-size: 12px; 
+    padding: 8px 0;
+  }
+
+}
